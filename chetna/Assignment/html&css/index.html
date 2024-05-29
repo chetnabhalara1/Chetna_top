@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        .grid {
+            display: inline-grid;
+            width: 180vh;
+            height: 100vh;
+            flex-wrap: wrap;
+            margin-top: -36px;
+            overflow: hidden;
+            /* border: 2px solid red; */
+            grid-template-columns: auto auto auto auto auto auto;
+            gap: 20px;
+        }
+
+        .grid-item {
+            font-size: 30px;
+            background-color: aqua;
+            flex-wrap: wrap;
+            /* border: 2px solid red; */
+            padding: 50px;
+            text-align: center;
+        }
+
+        .grid-item1 {
+            grid-column: 1 / span 5;
+            flex-wrap: wrap;
+            grid-row: 1;
+        }
+
+        .grid-item2 {
+            flex-wrap: wrap;
+            grid-column: 6 / span 6;
+            grid-row: 1;
+        }
+
+        .grid-item3 {
+            flex-wrap: wrap;
+            grid-column: 1 / span 1;
+            grid-row: 2;
+        }
+
+        .grid-item4 {
+            grid-row: 2;
+            flex-wrap: wrap;
+            grid-column: 2 / span 7;
+        }
+
+        .grid-item5 {
+            grid-row: 2;
+            flex-wrap: wrap;
+            grid-column: 9/ span 3;
+        }
+
+        .grid-item6 {
+            grid-column: 1 / span 3;
+            flex-wrap: wrap;
+            grid-row: 3;
+        }
+
+        .grid-item7 {
+            grid-column: 4 / span 8;
+            flex-wrap: wrap;
+            grid-row: 3;
+        }
+
+        .grid-item8 {
+            margin-bottom: -100px;
+            flex-wrap: wrap;
+            grid-row: 4;
+            grid-column: 1 / span 2;
+        }
+
+        .grid-item9 {
+            margin-bottom: -100px;
+            flex-wrap: wrap;
+            grid-row: 4;
+            grid-column: 3 / span 4;
+        }
+
+        .grid-item10 {
+            grid-row: 4;
+            flex-wrap: wrap;
+            margin-bottom: -100px;
+            grid-column: 7 / span 5;
+        }
+
+        .twoicon {
+            margin-top: 50px;
+            float: right;
+        }
+
+        .twoicon .image1 {
+            width: 40px;
+            margin-right: 10px;
+            height: 40px;
+        }
+
+        .twoicon .image2 {
+            margin-right: 10px;
+            width: 40px;
+            height: 40px;
+        }
+
+        .twoicon .image3 {
+            margin-right: 10px;
+            width: 40px;
+            height: 40px;
+        }
+
+        .two {
+            color: white;
+            flex-wrap: wrap;
+        }
+
+        .main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+        .two h1 {
+            gap: 20px;
+            font-size: 40px;
+            text-align: right;
+        }
+
+        .two ul li {
+            list-style: none;
+            cursor: pointer;
+            margin-top: 15px;
+            text-align: right;
+        }
+
+        .two ul li:hover {
+            color: red;
+        }
+
+        @media only screen and (max-width:600px) {
+            .grid {
+                /* display: inline-grid; */
+                /* width: 180vh; */
+                /* height: 100vh; */
+                flex-direction: column;
+                /* margin-top: -36px; */
+                overflow: hidden;
+                /* border: 2px solid red; */
+                grid-template-columns: auto auto auto auto auto auto;
+                gap: 20px;
+            }
+
+            .grid-item {
+                font-size: 30px;
+                background-color: aqua;
+                flex-direction: column;
+                /* border: 2px solid red; */
+                padding: 50px;
+                text-align: center;
+            }
+
+            .grid-item1 {
+                grid-column: 1 / span 5;
+                flex-direction: column;
+                grid-row: 1;
+            }
+
+            .grid-item2 {
+                flex-direction: column;
+                grid-column: 6 / span 6;
+                grid-row: 1;
+            }
+
+            .grid-item3 {
+                grid-column: 1 / span 1;
+                flex-direction: column;
+                grid-row: 2;
+            }
+
+            .grid-item4 {
+                grid-row: 2;
+                flex-direction: column;
+                grid-column: 2 / span 7;
+            }
+
+            .grid-item5 {
+                grid-row: 2;
+                flex-direction: column;
+                grid-column: 9/ span 3;
+            }
+
+            .grid-item6 {
+                grid-column: 1 / span 3;
+                flex-direction: column;
+                grid-row: 3;
+            }
+
+            .grid-item7 {
+                grid-column: 4 / span 8;
+                flex-direction: column;
+                grid-row: 3;
+            }
+
+            .grid-item8 {
+                margin-bottom: -100px;
+                flex-direction: column;
+                grid-row: 4;
+                grid-column: 1 / span 2;
+            }
+
+            .grid-item9 {
+                margin-bottom: -100px;
+                flex-direction: column;
+                grid-row: 4;
+                grid-column: 3 / span 4;
+            }
+
+            .grid-item10 {
+                grid-row: 4;
+                flex-direction: column;
+                margin-bottom: -100px;
+                grid-column: 7 / span 5;
+            }
+
+            .twoicon {
+                margin-top: 50px;
+                float: right;
+            }
+
+            .twoicon .image1 {
+                width: 40px;
+                margin-right: 10px;
+                height: 40px;
+            }
+
+            .twoicon .image2 {
+                margin-right: 10px;
+                width: 40px;
+                height: 40px;
+            }
+
+            .twoicon .image3 {
+                margin-right: 10px;
+                width: 40px;
+                height: 40px;
+            }
+
+            .two {
+                flex-direction: column;
+                color: white;
+            }
+
+            .main {
+                flex-direction: column;
+                /* display: flex; */
+                /* justify-content: space-evenly; */
+            }
+
+            .two h1 {
+                gap: 20px;
+                font-size: 40px;
+                text-align: right;
+            }
+
+            .two ul li {
+                list-style: none;
+                cursor: pointer;
+                margin-top: 15px;
+                text-align: right;
+            }
+
+            .two ul li:hover {
+                color: red;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1> 1 Create image gallery using display grid with responsive? </h1>
+    <section class="main">
+        <div class="grid">
+            <div class="grid-item1 grid-item">image 1</div>
+            <div class="grid-item2 grid-item">image 2</div>
+            <div class="grid-item3 grid-item">image 3</div>
+            <div class="grid-item4 grid-item">image 4</div>
+            <div class="grid-item5 grid-item">image 5</div>
+            <div class="grid-item6 grid-item">image 6</div>
+            <div class="grid-item7 grid-item">image 7</div>
+            <div class="grid-item8 grid-item">image 8</div>
+            <div class="grid-item9 grid-item">image 9</div>
+            <div class="grid-item10 grid-item">image 10</div>
+        </div>
+        <div class="two">
+            <h1>SHUTTER</h1>
+            <ul>
+                <li>HOME</li>
+                <li>PHOTOS</li>
+                <li>BIO</li>
+                <li>BLOG</li>
+                <li>CONTACT</li>
+            </ul>
+            <div class="twoicon">
+                <img class="image1" src="/facebook-f.svg" alt="">
+                <img class="image2" src="/instagram.svg" alt="">
+                <img class="image3" src="/twitter.svg" alt="">
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
