@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" name="myform" method="post" onsubmit="return validate()">
+        <table>
+            <tr>
+                <td>First Name:</td>
+                <td><input type="text" name="fname" id="fname" style="width: 500px;"></td>
+            </tr>
+            <tr>
+                <td>Last Name:</td>
+                <td><input type="text" name="lname" id="lname" style="width: 500px;"></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="text" name="email" id="" style="width: 500px;"></td>
+            </tr>
+            <tr>
+                <td>Moblie:</td>
+                <td><input type="text" name="mob" id="" style="width: 500px;"></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td>male<input type="radio" name="gender" id="male">
+                    female<input type="radio" name="gender" id="female"></td>
+            </tr>
+            <tr>
+                <td>Date Of Birth:</td>
+                <td><input type="date" name="dob" id="" style="width: 500px;"></td>
+            </tr>
+
+            <tr>
+                <td>Address:</td>
+                <td><textarea name="address" id="" style="width: 500px;"></textarea></td>
+            </tr>
+            <tr>
+                <td>City:</td>
+                <td><input type="text" name="city" id="" style="width: 500px;"></td>
+            </tr>
+            <tr>
+                <td>Area Pin:</td>
+                <td><input type="text" name="apin" id="" style="width: 500px;"></td>
+            </tr>
+            <tr>
+                <td>State</td>
+                <td><input type="text" name="state" id="" style="width: 500px;"></td>
+            </tr>
+            <tr>
+                <td>Qualification:</td>
+                <td><select name="qn" id="qn" style="width: 500px;">
+                        <option value="0" name="qn">select Qualification</option>
+                        <option value="bca" name="qn">Bca</option>
+                        <option value="b.com" name="qn">B.bom</option>
+                        <option value="bba" name="qn">BBA</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <td>specialization:</td>
+                <td>
+                    <option value=""></option>
+                    <input type="checkbox" name="chk" id=""> computer science <br>
+                    <input type="checkbox" name="chk" id=""> information techogoly <br>
+                    <input type="checkbox" name="chk" id=""> computer architecture <br>
+                    <input type="checkbox" name="chk" id=""> Tele communication
+                </td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="text" name="pass" id="" style="width: 500px;"></td>
+            </tr>
+            <tr>
+                <td><button>Register</button></td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+<script>
+    function validate() {
+        var fname = document.forms["myform"]["fname"].value;
+        // var fname = document.getElementById("fname").value;
+        if (fname == "" || fname == null) {
+            alert("enter user first name");
+            return false;
+        }
+        var lname = document.forms["myform"]["lname"].value;
+        // var lname = document.getElementById("lname").value;
+        if (lname == "" || lname == null) {
+            alert("enter your last name");
+            return false;
+        }
+        var email = document.forms["myform"]["email"].value;
+        if (email == "" || email == null) {
+            alert("enter your email");
+            return false;
+
+        }
+        var emi = /^[A-Za-z0-9_]+@[A-Za-z]+\.[A-Za-z]{2,4}$/;
+        if (!emi.test(email)) {
+            alert("please enter valid email ")
+            return false;
+        }
+        var mob = document.forms["myform"]["mob"].value;
+        if (mob == "" || mob == null) {
+            alert("please enter your mobile")
+            return false;
+
+        }
+        var pno = /^[0-9]{10,12}$/;
+        if (!pno.test(mob)) {
+            alert("enter only 10 degits")
+            return false;
+        }
+
+        var gender = document.forms["myform"]["gender"];
+        if (gender[0].checked == true) {
+
+        }
+        else if (gender[1].checked == true) {
+
+        }
+        else {
+            alert("please select gender");
+            return false;
+        }
+
+        var dob = document.forms["myform"]["dob"];
+        if (dob == "" || dob == null) {
+            alert("please enter your birthday");
+            return false;
+        }
+        var address = document.forms["myform"]["address"].value;
+        if (address == "" || address == null) {
+            alert("please enter address");
+            return false;
+
+        }
+        var add = /^[A-Za-z0-9]{0,50}$/;
+        if (!add.test(address)) {
+            alert("enter only 50 char...")
+            return false;
+        }
+        var city = document.forms["myform"]["city"].value;
+        if (city == "" || city == null) {
+            alert("please enter city");
+            return false;
+        }
+        var apin = document.forms["myform"]["apin"].value;
+        if (apin == '' || apin == null) {
+            alert("please enter area pin ");
+            return false;
+        }
+
+        var state = document.forms["myform"]["state"].value;
+        if (state == "" || state == null) {
+            alert("please enter your state");
+            return false;
+        }
+
+
+        var qn = document.forms["myform"]["qn"];
+        if(qn.value == 0){
+            alert("Please select qualification");
+            return false;
+        }
+        // if (qn == "0") {
+        //     alert("please select Qualification");
+        //     return false;
+        // }
+
+
+
+        var chk = document.forms["myform"]["chk"];
+        if (chk[0].checked == true) {
+
+        }
+        else if (chk[1].checked == true) {
+
+        }
+        else if (chk[2].checked == true) {
+
+        }
+        else if (chk[3].checked == true) {
+
+        }
+
+        else {
+            alert('! Please Select minimum one specialization');
+            return false;
+        }
+
+        var pass = document.forms["myform"]["pass"].value;
+        if (pass == "" || pass == null) {
+            alert("enter your password");
+            return false;
+        }
+        if (!pass.length >= 3 && pass.length <= 8) {
+            alert("enter password min 3 to mix 8");
+            return false;
+        }
+
+    }
+</script>
+
+</html>
