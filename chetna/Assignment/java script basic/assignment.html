@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+
+    //7) Check if typeof’10’ is exactly equal to 10. If not make it exactly equal?
+
+    let a = "10";
+    let b = 10;
+    console.log(a === b);
+    a = 10
+    console.log(a === b);
+
+
+
+    // 11) Find circumference of rectangle formula: C = 4 * a ?
+
+    let d = 4;
+    let c = 4 * a;
+    console.log("circumference of rectangle", c);
+
+
+
+    //12) WAP to convert years into days and days into year? 
+
+
+    function yearsToDays(years) {
+        const daysInYear = 365;
+        return years * daysInYear;
+    }
+
+    function daysToYears(days) {
+        const daysInYear = 365;
+        return days / daysInYear;
+    }
+
+
+    const years = 2;
+    const daysFromYears = yearsToDays(years);
+    console.log('${years} years is approximately ${daysFromYears} days.');
+
+    const days = 730;
+    const yearsFromDays = daysToYears(days);
+    console.log('${days} days is approximately ${yearsFromDays.toFixed(2)} years.');
+
+    //15) What is the result of the expression (5>3 && 2<4)?
+    console.log((5 > 3 && 2 < 4));
+
+    //16) What is the result of the expression (true && 1 “hello”)?
+    console.log(true && 'hello');
+
+    //17) What is the result of the expression true && false || false && true?
+    console.log(true && false || false && true);
+
+    //22) Check Number Is Positive or negative in JavaScript?
+    let x = 10;
+    if (x > 0) {
+        console.log('number is poisitive');
+    }
+    else if (x == 0) {
+        console.log('number is zero');
+
+    }
+    else {
+        console.log('number is nagitive');
+    }
+
+    //23) Find the Character Is vowel or not?
+    let ch = "a"
+    if (a === a || a === e || a === i || a === o || a === u) {
+        console.log('character is vowel');
+
+    }
+    else {
+        console.log('character is not');
+    }
+
+    //24) Write to check whether a number is Negative, positive or zero?
+
+    let y = 5;
+    if (y > 0) {
+        console.log('number is poisitive');
+    }
+    else {
+        console.log('number is nagitive');
+    }
+
+
+    //25) write to find number is even or odd using ternary operator in JS?
+    let r = (a % 2 === 0) ? (console.log("even")) : (console.log("odd"));
+
+    // 26) Write find maximum number among 3 number using ternary operator in JS?
+    let o = 15;
+    let p = 25;
+    let q = 30;
+    let max = (o > p) ?
+        (p > q) ?
+            (console.log('o is maximum')) :
+            (console.log('p is maximum')) :
+        (p > q) ?
+            (console.log('p is maximum')) :
+
+            (console.log('q is maximum'));
+
+    //27) Write to find minimum number among 3 numbers using ternary operator in JS?  
+
+    let min = (o < p) ?
+
+        (p < q) ?
+            (console.log('o is minimum')) :
+            (console.log('p is min')) :
+        (p < q) ?
+            (console.log('p is min')) :
+            (console.log('q is min'))
+
+    // 28) Write to find the largest of three number in JS?
+    let num1 = 10
+    let num2 = 20
+    let num3 = 30
+    if (num1 > num2 && num1 > num3) { console.log(num1); }
+    else if (num2 > num1 && num2 > num3) {
+        console.log(num2);
+    }
+    else {
+        console.log(num3)
+    }
+
+    //29) Write to show 
+    //i. Monday to Saturday using switch case in JS?
+
+    var f = new Date()
+    var day = f.getDay();
+    switch (day) {
+        case 0: console.log('sunday');
+            break;
+        case 1: console.log('monday');
+            break;
+        case 2: console.log('tuesday');
+            break;
+        case 3: console.log('wednesday');
+            break;
+        case 4: console.log('thruesday');
+            break;
+
+        case 5: console.log('friday');
+            break;
+        case 6: console.log('saturday');
+            break;
+        default:
+            break;
+
+
+    }
+
+    //ii. Vowel or Consonant using switch case in JS?
+    switch (ch) {
+        case 'a': console.log('a is vowel');
+            break;
+        case 'e': console.log('e is vowel');
+            break;
+        case 'i': console.log('i is vowel');
+            break;
+        case 'o': console.log('o is vowel');
+            break;
+        case 'u': console.log('u is vowel');
+            break;
+        default: console.log('not vowel');
+            break;
+    }
+
+    //31) Write a print 972 to 897 using for loop in JS?
+
+    for (let i = 972; i >= 897; i--) {
+        console.log(i);
+        // document.write(i,' ')
+
+
+    }
+
+
+    //32)Write to print factorial of given number?
+
+    function factorial(n) {
+        if (n === 0 || n === 1) {
+            return 1;
+        }
+        let result = 1;
+        for (let i = n; i > 1; i--) {
+            result *= i;
+        }
+        return result;
+    }
+
+    //33) Write to print Fibonacci series up to given number? 
+    var nm = 6
+    let n1 = 0, n2 = 1, n;
+    for (let i = 1; i <= nm; i++) {
+        console.log(n1);
+        n = n1 + n2;
+        n1 = n2
+        n2 = n
+    }
+
+    //34) Write to print number in reverse order e.g.: number = 64728 ---> reverse =82746 in JS?
+    let cha = ["6", "4", "7", "2", "8"]
+    document.write('array is length' + cha.length + "<br>");
+    document.write('array is short' + cha.sort() + "<br>");
+    document.write('array is reverse' + cha.reverse())
+</script>
+
+</html>
